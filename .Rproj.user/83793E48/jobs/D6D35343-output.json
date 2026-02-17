@@ -1,0 +1,6 @@
+[1,"=> shiny::runApp()\n\n"]
+[2,"Cargando paquete requerido: shiny\r\n"]
+[2,"\r\nAdjuntando el paquete: 'dplyr'\r\n\r\nThe following objects are masked from 'package:stats':\r\n\r\n    filter, lag\r\n\r\nThe following objects are masked from 'package:base':\r\n\r\n    intersect, setdiff, setequal, union\r\n\r\n"]
+[2,"\r\nAdjuntando el paquete: 'DT'\r\n\r\nThe following objects are masked from 'package:shiny':\r\n\r\n    dataTableOutput, renderDataTable\r\n\r\n"]
+[2,"\r\nAdjuntando el paquete: 'lubridate'\r\n\r\nThe following objects are masked from 'package:base':\r\n\r\n    date, intersect, setdiff, union\r\n\r\n"]
+[2,"\r\nListening on http://127.0.0.1:7569\r\n"]

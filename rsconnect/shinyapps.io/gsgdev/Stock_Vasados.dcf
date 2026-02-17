@@ -1,0 +1,12 @@
+name: Stock_Vasados
+title: Stock_Vasados
+username: gsgdev
+account: gsgdev
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 16693800
+bundleId: 11593933
+url: https://gsgdev.shinyapps.io/Stock_Vasados/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
