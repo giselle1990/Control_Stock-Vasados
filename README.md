@@ -1,124 +1,69 @@
-# 🌿 Control de Stock Vegan – Shiny App
+# 📦 Control de Stock – Vasados
 
-Aplicación desarrollada en **R Shiny** para la gestión dinámica de stock con estructura jerárquica:
-
-> Categoría → Subcategoría (producto) → Unidad → Movimientos
-
-Diseñada con enfoque minimalista, estética verde manzana y visualización clara de métricas operativas.
+Sistema de gestión de stock desarrollado en **R + Shiny**, pensado para organizaciones y equipos de voluntariado que necesitan controlar insumos de manera simple, visual y en tiempo real.
 
 ---
 
-## 🍏 Funcionalidades principales
+## 🌿 Características principales
 
-- ✔ Registro de movimientos en tiempo real (Entrada / Salida / Ajuste)
-- ✔ Cálculo automático de stock actual
-- ✔ Resumen por **categoría**
-- ✔ Resumen por **subcategoría (producto)**
-- ✔ Reporte visual con etiquetas de cantidad
-- ✔ Filtro por unidad de medida (kg / l / unidad / paquete)
-- ✔ Historial completo de movimientos
-
----
-
-## 📊 Lógica de cálculo
-
-El stock actual se calcula automáticamente mediante:
-
-```
-Stock actual = Stock inicial + Entradas − Salidas ± Ajustes
-```
-
-Todos los reportes se actualizan en tiempo real gracias al modelo reactivo de Shiny.
+- ✅ Stock inicial configurable
+- ✅ Gestión multi-voluntario
+- ✅ Movimientos de Entrada / Salida / Ajuste
+- ✅ Dashboard general automático
+- ✅ Filtros por categoría y unidad
+- ✅ Resumen individual por voluntario
+- ✅ Historial de movimientos
+- ✅ Confirmaciones visuales (modal)
+- ✅ Interfaz personalizada verde manzana 🍏
+- ✅ Fondo temático con capibaras translúcidas
 
 ---
 
-## 🧠 Estructura del modelo de datos
+## 🧠 Lógica del sistema
 
-```
-Categoría
-   └── Subcategoría (Producto)
-          └── Unidad de medida
-                 └── Movimientos
-```
-
-Esto permite:
-
-- Agregación por categoría
-- Agregación por producto
-- Filtrado por unidad
-- Reportes visuales consistentes
+- El **Stock General** parte del `stock_inicial`.
+- Los movimientos precargados son solo informativos.
+- Solo los **movimientos futuros** modifican el total general.
+- Cada voluntario tiene su propio stock visible.
+- El Dashboard siempre refleja el total actualizado automáticamente.
 
 ---
 
-## 🎨 Diseño
+## 🗂️ Estructura de la aplicación
 
-- Paleta verde manzana 🌿
-- Estética minimalista tipo vegan dashboard
-- Fondo con patrón translúcido
-- Tarjetas con sombra suave
-- Gráficos con:
-  - Barras verde oscuro
-  - Borde negro
-  - Etiquetas visibles de cantidad
+### 1️⃣ Stock General
+- Totales por categoría
+- Totales por subcategoría
+- Reporte visual (gráfico de barras)
+- Filtros dinámicos
 
-Diseñado para lectura rápida y control operativo eficiente.
+### 2️⃣ Gestión por Voluntario
+- Selección de voluntario
+- Registro de movimientos
+- Vista de stock individual
+- Historial personal
+
+### 3️⃣ Resumen por Voluntario
+- Selector individual
+- Comparativo general
+- Tabla consolidada
 
 ---
 
-## 🛠 Tecnologías utilizadas
+## 📊 Tecnologías utilizadas
 
-- R
-- Shiny
-- dplyr
-- ggplot2
-- DT
-- CSS personalizado
+- R  
+- Shiny  
+- dplyr  
+- DT  
+- ggplot2  
+- lubridate  
 
 ---
 
 ## 🚀 Cómo ejecutar la app
 
-### 1️⃣ Clonar el repositorio
+1. Clonar el repositorio:
 
 ```bash
-git clone https://github.com/tuusuario/control-stock-vegan.git
-cd control-stock-vegan
-```
-
-### 2️⃣ Instalar paquetes necesarios
-
-```r
-install.packages(c("shiny","dplyr","ggplot2","DT","lubridate"))
-```
-
-### 3️⃣ Ejecutar la aplicación
-
-```r
-shiny::runApp()
-```
-
----
-
-## 📈 Roadmap / Mejoras futuras
-
-- Persistencia en base de datos (SQLite)
-- Control de usuarios y permisos
-- Alertas de stock mínimo (semáforo)
-- Exportación a Excel / CSV
-- Dashboard KPI avanzado
-- Deploy en shinyapps.io o servidor propio
-
----
-
-## 👩‍💻 Autora
-
-Desarrollado por **Giselle San German**  
-Abogada | Analista de Datos | BI & Auditoría  
-
-Soluciones prácticas basadas en datos para gestión operativa y control interno.
-
----
-
-## 📄 Licencia
-
-Proyecto desarrollado con fines de gestión y portfolio profesional.
+git clone https://github.com/giselle1990/Control_Stock-Vasados.git
